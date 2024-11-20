@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Calculator</title>
+        <link rel="icon" type="image/png" sizes="32x32" href="calculator.webp">
+        <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="dark-light-mode.css">
+        <link rel="stylesheet" href="calculator.css">
+        <link rel="stylesheet" href="navbarr.css">
+        
+    </head> 
+    <body>
+        <!-- ნავბარი -->
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <img src="calculator (2).png" class="logo" ehref="#">
+
+            </ul>
+        </nav>
+        <!-- dark/light mode html -->
+        <label>
+            <input type="checkbox" name="checkbox" id="toggle-checkbox" class="toggle-checkbox" checked>
+            <div class="toggle-slot">
+                <div class="toggle-button"></div>
+                <div class="dark-mode" class="dark-wrapper">
+                    <img src="dark_mode.png" class="dark-mode">
+                </div>
+                <div class="light-mode" class="light-wrapper">
+                    <img src="sunset.png" class="light-mode">
+                </div>
+                
+            </div>
+        </label>
+
+        <video autoplay loop muted plays-inline class="back-video">
+            <source src="black-cat-sakura-bridge-pixel-moewalls-com.mp4" type="video/mp4">
+        </video>
+
+        <div class="container">
+            <div class="display">
+                <input id="screen" type="text" placeholder="0">
+            </div>
+
+            <div class="btns">
+                <div class="row">
+                    <button id="ce" onclick="backspc()">CE</button>
+                    <button class="btn1" onclick="fact()">x!</button>
+                    <button class="btn">(</button>
+                    <button class="btn">)</button>
+                    <button class="btn">%</button>
+                    <button id="ac" onclick="screen.value=''">AC</button>
+                </div>
+
+                <div class="row">
+                    <button class="btn1" onclick="sin()">sin</button>
+                    <button class="btn1" onclick="pi()">π</button>
+                    <button class="btn">7</button>
+                    <button class="btn">8</button>
+                    <button class="btn">9</button>
+                    <button class="btn">÷</button>
+                </div>
+
+                <div class="row">
+                    <button class="btn1" onclick="cos()">cos</button>
+                    <button class="btn1" onclick="log()">log</button>
+                    <button class="btn">4</button>
+                    <button class="btn">5</button>
+                    <button class="btn">6</button>
+                    <button class="btn">×</button>
+                </div>
+
+                <div class="row">
+                    <button class="btn1" onclick="tan()">tan</button>
+                    <button class="btn1" onclick="sqrt()">√</button>
+                    <button class="btn">1</button>
+                    <button class="btn">2</button>
+                    <button class="btn">3</button>
+                    <button class="btn">-</button>
+                </div>
+
+                <div class="row">
+                    <button class="btn1" onclick="e()">e</button>
+                    <button class="btn1" onclick="pow()">x <span style="position: relative; bottom: .4em; right: .1em;">y</span> </button>
+                    <button class="btn">0</button>
+                    <button class="btn">.</button>
+                    <button id="eval" onclick="screen.value=eval(screen.value)">=</button>
+                    <button class="btn">+</button>
+                </div>
+            </div>
+        </div>
+    
+          <!-- შემქნელის სახელები და ინსტაგრამები -->
+        <footer class="attribution">
+            <p>
+                Coded by
+                <div>
+                    <a href="https://www.instagram.com/nika_nikaa02/">Nika Sheshaberidze</a><i class="fa-brands fa-instagram"></i>
+                </div>
+                <div>
+                    <a href="https://www.facebook.com/profile.php?id=100045216438158">Kote Tsiklauri</a><i class="fa-brands fa-instagram"></i>
+                </div>
+                <div>
+                    <a href="https://www.instagram.com/anuki_shubladze/">Anuki Shubladze</a><i class="fa-brands fa-instagram"></i>
+                </div>
+                <div>
+                    <a href="https://www.facebook.com/rati.shavadze.1">Rati Shavadze</a><i class="fa-brands fa-instagram"></i>
+                </div>
+            </p>
+        </footer>
+    </body>
+    <script src="script.js"></script> 
+    <script src="https://kit.fontawesome.com/5d538e6527.js" crossorigin="anonymous"></script>
+</html>

@@ -1,0 +1,84 @@
+
+.toggle-checkbox , .toggle-slot {
+    position: absolute;
+    top: 50px;
+    right: 10px;
+}
+
+.toggle-checkbox {
+    display: none;
+    position: absolute;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+
+.toggle-slot {
+    height: 40px;
+    width: 60px;
+    border: 5px solid #e4e7ec;
+    border-radius: 160px;
+    background-color: #fff;
+    box-shadow: 0px 5px 20px rgb(26, 136, 33);
+    transition: background-color 250ms;
+    cursor: pointer;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: 1.3s;
+}
+
+
+.toggle-checkbox:checked~.toggle-slot {
+    background-color: #374151;
+}
+
+.toggle-button {
+    transform: translate(10px, 15px);
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-color: #ffeccf;
+    box-shadow: inset 0px 0px 0px 12px #ffbb52;
+
+}
+
+.toggle-checkbox:checked~ .toggle-slot .toggle-button {
+    background-color: #e3e7ef;
+    transform: translate(35px, 15px);
+}
+
+.light-mode ,.dark-mode{
+    position: absolute;
+    height: 25px;
+}
+
+.light-mode {
+    top: 4px;
+    right: 2px;
+}
+
+.dark-mode{
+    top: 4px;
+    left: 2px;
+    visibility: hidden;
+}
+
+.toggle-checkbox:checked~.toggle-slot .light-mode {
+    visibility: hidden;
+}
+
+.toggle-checkbox:checked~.toggle-slot .dark-mode {
+    visibility: visible;
+}
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}

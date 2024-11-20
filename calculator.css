@@ -1,0 +1,281 @@
+body {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-size: 100%;
+    background-position: center;
+}
+:root {
+    font-size: 15px;
+    --prim-dark-blue: hsl(233, 47%, 7%);
+    --prim-sat-blue: hsl(244, 38%, 16%);
+    --prim-violet: hsl(277, 64%, 61%);
+  
+    --neu-white: hsl(0, 0%, 100%);
+    --neu-trans-white: hsla(0, 0%, 100%, 0.75);
+    --neu-more-trans-white: hsla(0, 0%, 100%, 0.6);
+  
+    --bg-violet: hsl(277deg, 100%, 50%, 0.42);
+    --bg-light-violet: hsl(293deg, 42%, 35%, 0.24);
+  }
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0,5);
+    z-index: 1000;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: 1s;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.navbar li {
+    margin: 0 15px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    font-size: 1em;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: #5390d9;
+}
+.back-video{
+    padding-right: -20px;
+    width: 100%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+.container {
+    margin-left: 1.8em;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 13px 13px 20px #140333, 
+        -13px -13px 20px #250259ba;
+    background-color: #10042da7;
+    opacity: 0;
+    animation: slideTop 1.5s ease forwards;
+    animation-delay: calc(0.2 * var(--1));
+}
+
+.content {
+    width: 100%;
+    margin-top: 1.7em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.row button {
+    width: 60px;
+    height: 30px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    margin: 5px;
+    border-radius: 4px;
+    transition: .1s;
+    box-shadow: 5px 5px 8px #0000009c,
+        -5px -5px 8px #3a0ca3;
+}
+
+.row button:hover {
+    box-shadow: inset 5px 5px 8px rgba(16, 16, 16, .1),
+        inset -5px -5px 8px #3a0ca3;
+    background: #1d3bc5;
+}
+
+.display #screen {
+    margin-bottom: .5em;
+    width: auto;
+    height: 70px;
+    font-size: 35px;
+    outline: none;
+    border: none;
+    text-align: right;
+    padding-right: .5em;
+    background:  #ecf0f3;
+    border-radius: 6px;
+    box-shadow: inset 8px 8px 8px #cbced1,
+        inset -8px -8px 8px #ecf0f3;
+}
+
+.btn {
+    background-color: #03045e;
+    color: #000;
+}
+
+.btn1 {
+    background-color:  #023e8a;
+    color: #ade8f4;
+}
+
+
+#eval {
+    background: #1982c4;
+    color: #fff;
+    box-shadow: inset 5px 5px 8px #3399cc, inset -5px -5px 8px #006f99;
+}
+
+#eval:hover {
+    box-shadow: inset 5px 5px 8px #00ace6,
+        inset -5px -5px 8px #00ace6;
+}
+
+#ac {
+    background: #000000;
+    color: #fff;
+}
+
+#ac:hover {
+    box-shadow: inset 5px 5px 8px #0353a4,
+        inset -5px -5px 8px #435eaf;
+}
+
+#ce {
+    background: #cb04a5;
+    color: #fff;
+}
+
+#ce:hover {
+    box-shadow: inset 5px 5px 8px #c66391,
+        inset -5px -5px 8px #ff758f;
+}
+.logo {
+    position: absolute;
+    margin-left: 15px;
+    top:10px;
+    left:20px;
+    height:70px;
+    width:70px;
+    border-radius:1px; 
+}
+.attribution {
+    position: absolute;
+    left:  450px;
+    top: 290px;
+    font-size: 0.75rem;
+    line-height: 20px;
+    text-align: center;
+    color: #ff9dbe;
+    margin-bottom: 10px;
+    opacity: 0;
+    animation: slideSci 1.5s ease forwards;
+    animation-delay: calc(0.2 * var(--1));
+  }
+  
+  .attribution a {
+    text-decoration: none;
+    color: #ade8f4;
+    font-weight: bold;
+  }
+  
+  .attribution a:hover {
+    color: #4cc9f0;
+  }
+.attribution {
+    position: relative;
+    margin-top: 20px;
+  }
+  @keyframes slideTop {
+    0% {
+        transform: translateY(200px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes slideBottom {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes slideSci {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* ტელეფონის ზომა */
+
+@media (max-width: 480px) {
+    .navbar ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .back-video{
+        width: 100%;
+        height: auto;
+    }
+
+    .navbar li {
+        margin: 5px 0px;
+    }
+
+    .btn {
+        width: 50px;
+        height: 25px;
+        font-size: 12px;
+    }
+
+    .display #screen {
+        height: 50px;
+        font-size: 20px;
+    }
+
+    .container {
+        padding: 5px;
+    }
+
+    .attribution {
+        font-size: 0.5rem;
+        text-align: left;
+    }
+}
+
+
+
+

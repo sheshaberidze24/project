@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="calculator.css">
+        <link rel="icon" type="image/png" sizes="32x32" href="calculator.png">
+        <title>Calculator-register</title>
+    </head>
+    <body>
+        <div class="wraper">
+            <form onsubmit="validateForm(event)">
+                <h1>Register</h1>
+                <div class="input-box">
+                   <input type="text" id="username"   placeholder="Enter Your Name">
+                    <div class="input-box">
+                        <i class="fa-solid fa-pen" id="pen"></i>
+                        <input type="name" id="surname"   placeholder="Enter Your Surname">
+                        <i class="fa-solid fa-pen-to-square" id="pen1"></i>
+                    </div>
+                </div>
+                
+                <div id="error-message"></div>
+                <button type="submit" class="btn">Start Calculator</button>
+            </form>
+        </div>
+        <!-- შემქნელის სახელები და ფესიბუქი -->
+        <footer class="attribution">
+            <div>
+                Coded by
+                <div>
+                    <a href="https://www.facebook.com/nika.sheshaberidze.33">Nika Sheshaberidze</a><i class="fa-brands fa-facebook"></i>
+                </div>
+                <div>
+                    <a href="https://www.facebook.com/profile.php?id=100045216438158">Kote Tsiklauri</a><i class="fa-brands fa-facebook"></i>
+                </div>
+                <div>
+                    <a href="https://www.facebook.com/profile.php?id=100008191159285">Anuki Shubladze</a><i class="fa-brands fa-facebook"></i>
+                </div>
+                <div>
+                    <a href="https://www.facebook.com/rati.shavadze.1">Rati Shavadze</a><i class="fa-brands fa-facebook"></i>
+                </div>
+            </div>
+        </footer>
+        <script src="script.js"></script>
+        <script src="https://kit.fontawesome.com/5d538e6527.js" crossorigin="anonymous"></script>
+        
+    </body>
+</html>
